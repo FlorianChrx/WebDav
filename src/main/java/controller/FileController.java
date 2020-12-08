@@ -41,7 +41,7 @@ public class FileController {
     public Collection<Path> getFiles() {
         Collection<Path> list = new ArrayList<>();
         try {
-            Path path = Paths.get("../files/WebDaV/" + owner);
+            Path path = Paths.get("../files/WebDav/" + owner);
             Files.createDirectories(path);
             list = Files.list(path).collect(Collectors.toList());
         } catch (IOException e) {
