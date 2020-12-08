@@ -33,7 +33,7 @@ public class Auth extends HttpServlet {
             req.getSession().setAttribute("token", true);
             req.getSession().setAttribute("user", user.get().getUsername());
             try {
-                resp.sendRedirect("/index.jsp");
+                resp.sendRedirect("index.jsp");
             } catch (IOException e) {
                 e.printStackTrace();
             }
