@@ -1,3 +1,4 @@
+import connection.ConnectionManager;
 import controller.UserController;
 import model.User;
 
@@ -38,5 +39,11 @@ public class Auth extends HttpServlet {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy();
+        ConnectionManager.closeConnection();
     }
 }
